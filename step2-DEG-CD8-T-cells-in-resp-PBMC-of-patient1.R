@@ -92,8 +92,6 @@ if(F){
   ordering_genes <- row.names (subset(diff_test_res, qval < 0.01))
   cds <- setOrderingFilter(cds, ordering_genes)
   plot_ordering_genes(cds)
-  cds <- reduceDimension(cds, max_components = 2,
-                         method = 'DDRTree')
   
   # 然后降维
   cds <- reduceDimension(cds, max_components = 2,
